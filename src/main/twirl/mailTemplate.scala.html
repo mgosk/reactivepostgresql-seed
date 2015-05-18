@@ -1,0 +1,35 @@
+@(content: Html)
+@import twirl.api.Html
+<html lang=3D'en'>
+    <head>
+        <meta content="text/html" charset="utf-8" http-equiv="Content-Type">
+        <title>
+            reactivepostgresql-seed
+        </title>
+        </meta>
+    </head>
+    <style>
+    p.details {
+    font-style : italic ;
+    color : #777
+    }
+    .footer p {
+    font-size : small ;
+    color : #777
+    }
+    </style>
+    <body>
+        <div class="content">
+        @content
+        </div>
+        <div class="footer" style="margin-top : 10px ;">
+            <p>
+                --<br>
+                <a href=3D"http://reactivepostgresql-seed.com">reactivepostgresql-seed.com</a><br>
+                <a href="mailto:support@@reactivepostgresql-seed.com.pl?Subject=Unsolicited %20email" target="_top">
+                    support@@reactivepostgresql-seed.com</a>
+            </p>
+        </div>
+    </body>
+</html>
+
