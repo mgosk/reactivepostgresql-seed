@@ -36,14 +36,12 @@ libraryDependencies ++= {
     "io.spray" %% "spray-json" % sprayJsonV,
     "com.typesafe.akka" %% "akka-actor" % akkaV,
     "com.github.tminglei" %% "slick-pg" % slickPgV exclude("org.slf4j", "slf4j-simple"),
+    "ch.qos.logback" % "logback-classic" % "1.0.13",
+    "com.typesafe.akka" %% "akka-slf4j" % akkaV,
+    "com.zaxxer" % "HikariCP" % "2.3.5",
     "org.mindrot" % "jbcrypt" % jbcryptV,
     "me.lessis" %% "courier" % courierV,
-    "com.pellucid" %% "sealerate" % sealerateV,
-    "com.restfb" % "restfb" % "1.9.0",
-    "com.typesafe.akka" %% "akka-slf4j" % akkaV,
-    "ch.qos.logback" % "logback-classic" % "1.0.13",
-    "org.scala-lang.modules" %% "scala-async" % "0.9.2",
-    "com.zaxxer" % "HikariCP" % "2.3.5"
+    "com.restfb" % "restfb" % "1.9.0"
   )
 }
 
@@ -56,7 +54,7 @@ flywayUser := "postgres"
 flywayPassword := "postgres"
 
 ScalastylePlugin.projectSettings ++
-  Seq(ScalastylePlugin.scalastyleConfig := file("pr3oject/scalastyle-config.xml"),
+  Seq(ScalastylePlugin.scalastyleConfig := file("project/scalastyle-config.xml"),
     ScalastylePlugin.scalastyleFailOnError := true)
 
 scapegoatIgnoredFiles := Seq(".*/src/main/scala/eb/utils/spray/.*")
